@@ -1,0 +1,35 @@
+$tablet = "@media (min-width: 768px)"
+$medium = "@media (min-width: 992px)"
+$large = "@media (min-width: 1200px)"
+
+section-padding()
+    padding-top 2em
+    padding-bottom 2em
+
+.steve-bg-region
+    background-image url('//placehold.it/1500x1500&text=Big Ol Pic of Steven')
+    background-repeat no-repeat
+    background-position center
+    background-attachment fixed
+
+.video
+    padding-top 25px
+    padding-bottom 50px
+
+    @media (min-width: 768px)
+        padding-top 50px
+        padding-bottom 100px
+
+    @media (min-width: 992px)
+        padding-top 75px
+        padding-bottom 150px
+
+    video
+        width 100%
+
+.newsletter-cta
+    font-size 2.5em
+    section-padding()
+
+footer
+    section-padding()

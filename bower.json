@@ -1,0 +1,16 @@
+{
+  "name": "championshiptrophyfit.com",
+  "version": "1.0.0",
+  "authors": [
+    "enlore <n.e.lorenson@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

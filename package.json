@@ -1,0 +1,22 @@
+{
+  "name": "championshiptrophyfit.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "enlore",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-coffee": "~0.12.0",
+    "grunt-contrib-stylus": "~0.20.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-jade": "~0.14.0",
+    "grunt-bower-concat": "~0.4.0",
+    "load-grunt-tasks": "~3.1.0",
+    "grunt-contrib-connect": "~0.9.0",
+    "grunt-concurrent": "~1.0.0"
+  }
+}

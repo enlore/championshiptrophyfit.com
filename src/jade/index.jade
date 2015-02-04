@@ -1,0 +1,57 @@
+extends layouts/base
+block body
+  .steve-bg-region
+    section.masthead
+      .container
+        .row
+          .col-sm-12
+            h1 Branding
+            h2.
+              A little bit of light intro text about "My name is Steven I am certified
+              and will make you look awesome."
+
+    section.video
+      .container
+        .row
+          .col-sm-12
+            .video-inset
+              video.center-block(src="/vid/intro.mp4")
+
+  section.newsletter-cta
+    .container
+      .row
+        .col-sm-12.text-center
+          h2 Sign up for my mailing list and be the first to know.
+
+          form.form-inline
+            .control-group
+              input.form-control(type="text", placeholder="Enter your email")
+
+              button.form-control.btn.btn-primary(type="submit") Keep in Touch
+
+  footer.site-footer
+    .container
+      .row
+        .col-sm-3
+          p.h3 Contact Me
+          a(href="tel:+10003339999") Phone
+          a(href="mailto:steven@championshiptrophyfit.com") Email
+
+          p.h3 Connect With Me
+          ul
+            li
+              a(href="//facebook.com") Facebook
+
+            li
+              a(href="//pintrest.com") Pintrest
+
+        .col-sm-9.text-right
+          p.h2 Championship Trophy Fit
+          p &copy;2014 Championship Trophy Fit
+
+
+      .row
+        .col-sm-12
+          p.text-center.
+            Totally looking awesome in my bikini this season by
+            #[a(href="//elcreativegroup.com") Elliott &amp; Lorenson]
