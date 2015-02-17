@@ -1,21 +1,50 @@
+mixin roundEye(headline, copy, imgSrc, invert)
+  - if (typeof invert === "undefined")
+    - invert = false
+
+  .round-eye(class=attributes.class)
+    .round-eye-inner
+      .round-eye-header
+        - if (!invert)
+          h2=headline
+
+      .round-eye-body
+        .img-wrap
+          img.round-eye-img(src=imgSrc)
+
+        - if (invert)
+          h2= headline
+
+        p= copy
+
+      .round-eye-footer
+
 extends layouts/base
 block body
-  .steve-bg-region
-    section.masthead
+  .masthead
+    header
       .container
         .row
-          .col-sm-12
-            h1 Branding
-            h2.
-              A little bit of light intro text about "My name is Steven I am certified
-              and will make you look awesome."
+          .col-sm-6
+            img.center-block.img-responsive(src="/img/logo.png")
 
-    section.video
-      .container
-        .row
-          .col-sm-12
-            .video-inset
-              video.center-block(src="/vid/intro.mp4")
+  section.threebies
+    .container
+      .row
+        .col-sm-4
+          +roundEye("Results", "", "/img/side_abs_arm_raised.jpg", true).champ
+        .col-sm-4
+          +roundEye("Power", "", "/img/side_abs_arm_raised.jpg", true).champ
+        .col-sm-4
+          +roundEye("Guarenteed", "", "/img/side_abs_arm_raised.jpg", true).champ
+
+
+  section.video
+    .container
+      .row
+        .col-sm-12
+          .video-inset
+            iframe.img-responsive.center-block(src="https://www.youtube.com/embed/-EoAGad4Ho8",frameborder="0",allowfullscreen)
 
   section.newsletter-cta
     .container
