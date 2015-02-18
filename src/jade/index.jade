@@ -55,14 +55,10 @@ block body
   section.newsletter-cta
     .container
       .row
-        .col-sm-12.text-center
-          h2 Sign up for my mailing list and be the first to know.
+        .col-sm-6.col-sm-offset-3
+          h1.text-center Sign up for my mailing list and be the first to know.
 
-          form.form-inline
-            .control-group
-              input.form-control(type="text", placeholder="Enter your email")
-
-              button.form-control.btn.btn-primary(type="submit") Keep in Touch
+          include includes/chimp_form
 
   footer.site-footer
     .container
