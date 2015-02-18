@@ -2,9 +2,43 @@ $tablet = "@media (min-width: 768px)"
 $medium = "@media (min-width: 992px)"
 $large = "@media (min-width: 1200px)"
 
-section-padding()
-    padding-top 2em
-    padding-bottom 2em
+$black = #050000
+$main-bg = $black
+
+$white = #fefefe
+$body-fg = $white
+
+$agentOrange = #FF4001
+
+@import 'fonts'
+@import 'round_eye'
+
+html
+    font-size 18px
+
+body
+    background-color $main-bg
+    color $body-fg
+
+.masthead
+    width 100%
+
+    height 321px
+
+    @media (min-width: 1200px)
+        height 450px
+        //background-position center -300px
+        background-size cover
+
+    background-image url('/img/masthead_bg.jpg')
+    background-repeat no-repeat
+
+section-padding($pad=4rem)
+    padding-top $pad
+    padding-bottom $pad
+
+section
+    section-padding()
 
 .steve-bg-region
     background-image url('//placehold.it/1500x1500&text=Big Ol Pic of Steven')
@@ -13,23 +47,13 @@ section-padding()
     background-attachment fixed
 
 .video
-    padding-top 25px
-    padding-bottom 50px
-
-    @media (min-width: 768px)
-        padding-top 50px
-        padding-bottom 100px
-
-    @media (min-width: 992px)
-        padding-top 75px
-        padding-bottom 150px
-
-    video
-        width 100%
+    iframe
+        display block
+        width 800px
+        height 600px
 
 .newsletter-cta
     font-size 2.5em
-    section-padding()
 
 footer
     section-padding()
