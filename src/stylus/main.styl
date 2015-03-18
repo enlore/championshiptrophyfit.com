@@ -14,6 +14,10 @@ $agentOrange = #FF4001
 @import 'round_eye'
 @import 'chimp_form'
 
+ul, ol
+    list-style none
+    padding 0
+
 html
     font-size 18px
 
@@ -21,10 +25,14 @@ body
     background-color $main-bg
     color $body-fg
 
+.body-wrap
+    border-top 10px solid $agentOrange
+
 .masthead
     width 100%
 
     height 321px
+    background-position center center
 
     @media (min-width: 1200px)
         height 450px
@@ -54,5 +62,24 @@ section
         width 800px
         height 600px
 
+$footer-border = $black
+
+$footer-bg = $agentOrange
 footer
     section-padding()
+    //background-image url('/img/footer_bg.jpg')
+    background-image url('/img/scanline.png')
+    background-repeat repeat
+    background-color $footer-bg
+    //background-size cover
+    border-bottom 7px solid $footer-border
+
+    a
+        color $black
+        background-color $agentOrange
+
+    .shift-me
+        text-align center
+
+        @media (min-width: 768px)
+            text-align right

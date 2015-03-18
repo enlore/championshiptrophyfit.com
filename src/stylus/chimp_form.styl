@@ -1,4 +1,17 @@
+$btn-bg = $agentOrange
+
+.btn.btn-champ
+    background-color $btn-bg
+
 #mc_embed_signup
     form
+        label
+            font-size 1.2rem
+            line-height 46px
+
         padding-top 1em
         text-align center
+
+        @media (min-width: 1200px)
+            input
+                //min-width 300px

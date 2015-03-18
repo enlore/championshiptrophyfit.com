@@ -1,17 +1,23 @@
 <!-- Begin MailChimp Signup Form -->
 #mc_embed_signup
-  form#mc-embedded-subscribe-form.validate.form-inline(
+  form#mc-embedded-subscribe-form.validate(
   action="//elcreativegroup.us9.list-manage.com/subscribe/post?u=44c6399d595a10adb3593d069&id=7f15b9ebf8",
   method="post",
   name="mc-embedded-subscribe-form",
   target="_blank",
   novalidate=true)
-    .form-group
-      label.control-label(for="mce-EMAIL") Email Address #[span.asterisk *] &nbsp;
-      input#mce-EMAIL.required.email.form-control(type="email", name="EMAIL", value="")
-      &nbsp;
+    .row
+      .col-sm-3.col-md-2
+        .form-group.form-group-lg
+          label(for="mce-EMAIL") Email Address
 
-    button#mc-embedded-subscribe.btn.btn-primary(type="submit", name="subscribe") Get on the list!
+      .col-sm-6.col-md-7
+        .form-group.form-group-lg
+          input#mce-EMAIL.required.email.form-control(type="email", name="EMAIL", value="")
+
+      .col-sm-3
+        .form-group.form-group-lg
+          button#mc-embedded-subscribe.btn.btn-lg.btn-champ(type="submit", name="subscribe") Get on the List
 
       #mce-responses.clear
         #mce-error-response.response(style="display:none")
