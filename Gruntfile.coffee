@@ -4,11 +4,35 @@ module.exports = (grunt) ->
     grunt.registerTask "default", ["concurrent"]
 
     grunt.initConfig
+        #nodemon:
+        #   #exec:
+        #   #   options:
+        #   #       exec: "less"
+
+        #   dev:
+        #       script: "dist/index.js"
+
+        #   options:
+        #       env:
+        #           PORT: process.env.PORT or 3000
+        #           HOST: process.env.HOST or "127.0.0.1"
+        #           NODE_ENV: process.env.NODE_ENV or "development"
+        #       #callback: -> console.log "woo"
+        #       #nodeArgs: [""]
+        #       #args: [""]
+        #       #cwd: __dirname
+        #       ignore: ["node_modules/**"]
+        #       ext: "js, coffee"
+        #       watch: ["server, index"]
+        #       delay: 1000
+        #       legacyWatch: false
+
+
         concurrent:
             options:
                 logConcurrentOutput: true
             dev:
-                tasks: ["watch", "connect:serve"]
+                tasks: ["watch", "connect"]
 
         connect:
             serve:
@@ -28,10 +52,17 @@ module.exports = (grunt) ->
                 dependencies:
                     "bootstrap": ["jquery"]
 
+        copy:
+            config:
+                expand: false
+                src: ["src/server/config.js"]
+                dest: "dist/config.js"
+
         coffee:
             compile:
                 files:
-                    "dist/app/app.js": ["src/app/app.coffee"]
+                    "dist/server.js" : ["src/server/server.coffee"]
+                    "dist/index.js"  : ["src/server/index.coffee"]
 
         jade:
             compile:
@@ -47,12 +78,16 @@ module.exports = (grunt) ->
             options:
                 livereload: true
 
+            copy:
+                files: ["src/server/config.js"]
+                tasks: ["copy:config"]
+
             jade:
                 files: ["src/jade/**/*.jade"]
                 tasks: ["jade:compile"]
 
             coffee:
-                files: ["src/coffee/**/*.coffee", "src/app/**/*.coffee"]
+                files: ["src/**/*.coffee"]
                 tasks: ["coffee:compile"]
 
             stylus:
