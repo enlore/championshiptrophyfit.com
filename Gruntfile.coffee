@@ -63,6 +63,7 @@ module.exports = (grunt) ->
                 files:
                     "dist/server.js" : ["src/server/server.coffee"]
                     "dist/index.js"  : ["src/server/index.coffee"]
+                    "dist/static/js/main.js": ["src/coffee/main.coffee"]
 
         jade:
             compile:
@@ -97,3 +98,6 @@ module.exports = (grunt) ->
             bower_concat:
                 files: ["bower_components/**"]
                 tasks: ["bower_concat:concat"]
+
+            grunt:
+                files: ["Gruntfile.coffee"]
