@@ -1,6 +1,7 @@
 nav.navbar.navbar-default.navbar-ctf
   .container
-    button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#nav-collapse") +
+    button.navbar-toggle.collapsed.active#nav-button(type="button", data-toggle="collapse", data-target="#nav-collapse")
+      span.glyphicon.glyphicon-menu-down(aria-hidden="true")
 
     .collapse.navbar-collapse#nav-collapse
       ul.nav.navbar-nav.navbar-right

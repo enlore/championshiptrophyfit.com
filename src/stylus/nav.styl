@@ -1,6 +1,26 @@
+transition($target)
+    transition $target
+    -o-transition $target
+    -moz-transition $target
+    -webkit-transition $target
+
+$blue = #103741
+
 .navbar
     border-radius 0
 
 .navbar-ctf
     .navbar-nav a.active
        color $agentOrange
+
+     // spin the little dude around between clicks
+    .navbar-toggle.active
+        background-color transparent
+        transform none
+
+    .navbar-toggle
+        color $agentOrange
+        &:focus
+            background-color $blue
+        transform rotate(180deg)
+        transition(rotate 200ms ease-in-out)
