@@ -7,15 +7,15 @@
   target="_blank",
   novalidate=true)
     .row
-      .col-sm-3.col-md-2
+      .col-sm-8.col-sm-offset-2
         .form-group.form-group-lg
           label(for="mce-EMAIL") Email Address
 
-      .col-sm-6.col-md-7
         .form-group.form-group-lg
-          input#mce-EMAIL.required.email.form-control(type="email", name="EMAIL", value="")
+          input#mce-EMAIL.required.email.form-control(type="email", name="EMAIL", value="", placeholder="your@email.here")
 
-      .col-sm-3
+    .row
+      .col-sm-4.col-sm-offset-2
         .form-group.form-group-lg
           button#mc-embedded-subscribe.btn.btn-lg.btn-champ(type="submit", name="subscribe") Get on the List
 
