@@ -10,7 +10,7 @@ mixin roundEye(headline, copy, imgSrc, invert)
 
       .round-eye-body
         .img-wrap
-          img.round-eye-img(src=imgSrc)
+          img.round-eye-img.img-responsive(src=imgSrc)
 
         - if (invert)
           h2= headline
@@ -31,12 +31,12 @@ block body
   section.threebies
     .container
       .row
-        .col-sm-4
-          +roundEye("Nutrition", "", "/img/side_abs_arm_raised.jpg", true).champ
-        .col-sm-4
-          +roundEye("Hard Work", "", "/img/side_abs_arm_raised.jpg", true).champ
-        .col-sm-4
-          +roundEye("Results", "", "/img/side_abs_arm_raised.jpg", true).champ
+        .col-md-4
+          +roundEye("Nutrition", "", "/img/circle_thing.png", true).champ
+        .col-md-4
+          +roundEye("Hard Work", "", "/img/circle_thing.png", true).champ
+        .col-md-4
+          +roundEye("Results", "", "/img/circle_thing.png", true).champ
 
       .row
         .col-sm-12.text-center
