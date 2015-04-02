@@ -1,14 +1,17 @@
 nav.navbar.navbar-default.navbar-ctf
   .container
-    ul.nav.navbar-nav.navbar-right
-      li
-        a.active(href="/") Home
+    button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#nav-collapse") +
 
-      li
-        a(href="/blog") Blog
+    .collapse.navbar-collapse#nav-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a.active(href="/") Home
 
-      li
-        a(href="/#about-me") About Me
+        li
+          a(href="/blog") Blog
 
-      li
-        a(href="/#signup") Signup
+        li
+          a(href="/#about-me") About Me
+
+        li
+          a(href="/#signup") Signup
