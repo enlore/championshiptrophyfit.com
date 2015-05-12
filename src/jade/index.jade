@@ -74,26 +74,29 @@ block body
             and instructions for living in the kitchen the right way.
 
         .col-sm-4
-          img.img-responsive(src="http://placehold.it/500x500")
+          img.img-responsive(src="/img/nutrition.jpg")
 
       .row
         .col-sm-4
-          img.img-responsive(src="http://placehold.it/500x500")
+          img.img-responsive(src="/img/blonde_lady_doing_work.jpg")
 
         .col-sm-8
           h2 Work Hard
 
-          p.orange-pinstripe-bg.pad-me.
-            Ultimately, my mission as a certified fitness instructor is to help
-            people live healthier lives by teaching them exercises and routines
-            that work for the body, not against it. I was born to train people
-            and work hard alongside them. Being healthy means being in it for
-            the long haul and working out safely in the gym. I promise to give
-            each of my clients the dedication and careful attention they
-            deserve, so that they can overcome the personal obstacles
-            preventing them from being fit and living happier lives. With my
-            championship-level program, clients are guaranteed to work hard
-            and see the results they have always wanted.
+          .orange-pinstripe-bg.pad-me.skew-me
+            p.
+              Ultimately, my mission as a certified fitness instructor is to help
+              people live healthier lives by teaching them exercises and routines
+              that work for the body, not against it. I was born to train people
+              and work hard alongside them. Being healthy means being in it for
+              the long haul and working out safely in the gym. I promise to give
+              each of my clients the dedication and careful attention they
+              deserve, so that they can overcome the personal obstacles
+              preventing them from being fit and living happier lives. With my
+              championship-level program, clients are guaranteed to work hard
+              and see the results they have always wanted.
+
+            .skew-you
 
       .row
         .col-sm-8
@@ -112,7 +115,7 @@ block body
             great training and results with my fitness program.
 
         .col-sm-4
-          img.img-responsive(src="http://placehold.it/500x500")
+          img.img-responsive(src="/img/results.jpg")
 
   mixin fieldGroup(type, label, name, placeholder)
     - if (typeof placeholder === "undefined")
