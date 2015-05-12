@@ -37,7 +37,7 @@ module.exports = (grunt) ->
         connect:
             serve:
                 options:
-                    port: 3000
+                    port: process.env.PORT or 3000
                     hostname: "0.0.0.0"
                     debug: true
                     livereload: true
