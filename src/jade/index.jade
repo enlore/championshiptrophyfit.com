@@ -60,9 +60,9 @@ block body
     .container
       .row
         .col-sm-8
-          h1 Feed Your Machine
+          h2 Feed Your Machine
 
-          p.
+          p.orange-pinstripe-bg.pad-me.
             Every person’s body is a machine that needs the right fuel in order
             to run correctly. People who choose me as their certified fitness
             instructor can stop stressing about dieting and learn how to eat
@@ -81,9 +81,9 @@ block body
           img.img-responsive(src="http://placehold.it/500x500")
 
         .col-sm-8
-          h1 Work Hard
+          h2 Work Hard
 
-          p.
+          p.orange-pinstripe-bg.pad-me.
             Ultimately, my mission as a certified fitness instructor is to help
             people live healthier lives by teaching them exercises and routines
             that work for the body, not against it. I was born to train people
@@ -97,9 +97,9 @@ block body
 
       .row
         .col-sm-8
-          h1 Get The Results You Deserve
+          h2 Get The Results You Deserve
 
-          p.
+          p.orange-pinstripe-bg.pad-me.
             Everyone in the gym has their own goals. I have helped so many
             people already to achieve their health and fitness goals through
             better nutrition and hard work. It’s important for people to set
@@ -114,7 +114,40 @@ block body
         .col-sm-4
           img.img-responsive(src="http://placehold.it/500x500")
 
+  mixin fieldGroup(type, label, name, placeholder)
+    - if (typeof placeholder === "undefined")
+       - placeholder = ""
 
+    - if (type === "text")
+      label.form-label(for="#{name}")= label
+      input.form-control(type="text", name="#{name}", placeholder="#{placeholder}")
+
+
+    - else if (type === "textarea")
+      label.form-label(for="#{name}")= label
+      textarea.form-control(name="#{name}", placeholder="#{placeholder}")
+
+  section.contact-me
+    .container
+      .row
+        .col-sm-12
+          h1.text-center.
+            Get in touch with me today and we'll start planning your new lifestyle.
+
+      form(action="/contact-form", method="post")
+        .row
+          .col-sm-8.col-sm-offset-2
+            +fieldGroup("text", "Your Name", "clientName", "J. Doe")
+
+            +fieldGroup("text", "Your Email", "clientEmail", "you@email.com")
+
+            +fieldGroup("text", "Your Number", "clientPhone", "(555) 555 1234")
+
+            +fieldGroup("textarea", "Tell me about your number one goal", "clientGoal", "Live a better life!")
+
+        .row
+          .col-sm-8.col-sm-offset-2
+            button.btn.btn-lg.btn-ctf(type="submit") Let's Talk
 
   section.about-me#about-me
     .container
@@ -124,6 +157,7 @@ block body
 
         .col-sm-9
           h3 Learn Some About Me
+
           p.
             "Consul," said he, without preamble, "I have strong reasons for
             believing that my man is a passenger on the Mongolia." And he narrated
