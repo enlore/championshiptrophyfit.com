@@ -80,10 +80,7 @@ block body
           img.img-responsive(src="/img/nutrition.jpg")
 
       .row
-        .col-sm-4
-          img.img-responsive(src="/img/blonde_lady_doing_work.jpg")
-
-        .col-sm-8
+        .col-sm-8.col-sm-push-4
           h2 Work Hard
 
           .orange-pinstripe-bg.pad-me.skew-me
@@ -100,6 +97,9 @@ block body
               and see the results they have always wanted.
 
             .skew-you.right
+
+        .col-sm-4.col-sm-pull-8
+          img.img-responsive(src="/img/blonde_lady_doing_work.jpg")
 
       .row
         .col-sm-8
@@ -156,7 +156,7 @@ block body
 
         .row
           .col-sm-8.col-sm-offset-2
-            button.btn.btn-lg.btn-ctf(type="submit") Let's Talk
+            button.btn.btn-lg.btn-champ(type="submit") Let's Make a Better You
 
   section.about-me#about-me
     .container
