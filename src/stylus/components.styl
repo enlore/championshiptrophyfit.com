@@ -1,0 +1,15 @@
+$shadow-and-active-offset = 3px
+$offset = $shadow-and-active-offset
+.btn-read-more
+    box-shadow  $offset $offset 0 0 $pewter
+    background-color $agentOrange
+    position relative
+    color $black
+
+    &:hover
+        color $white
+
+    &:active
+        box-shadow none
+        right -($offset)
+        bottom -($offset)
