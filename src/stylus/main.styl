@@ -17,6 +17,7 @@ $pewter = #103741
 @import 'round_eye'
 @import 'chimp_form'
 @import 'nav'
+@import 'components'
 
 a:hover,
 a:active
@@ -57,11 +58,20 @@ section-padding($pad=4rem)
 section
     section-padding()
 
+.cta-wrap
+    margin-top 3rem
+
 .contact-cta
     color $white
     display block
-    margin-top 3rem
-    font-size 38px
+
+    span
+        font-size 32px
+
+
+    $tablet
+        span
+            font-size 38px
 
     &:hover, &:active
         color $white
