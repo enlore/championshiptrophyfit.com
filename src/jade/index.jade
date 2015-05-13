@@ -128,13 +128,15 @@ block body
        - placeholder = ""
 
     - if (type === "text")
-      label.form-label(for="#{name}")= label
-      input.form-control(type="text", name="#{name}", placeholder="#{placeholder}")
+      .form-group
+        label.form-label(for="#{name}")= label
+        input.form-control(type="text", name="#{name}", placeholder="#{placeholder}")
 
 
     - else if (type === "textarea")
-      label.form-label(for="#{name}")= label
-      textarea.form-control(name="#{name}", placeholder="#{placeholder}")
+      .form-group
+        label.form-label(for="#{name}")= label
+        textarea.form-control(name="#{name}", placeholder="#{placeholder}")
 
   section#contact-me.contact-me
     .container
@@ -156,7 +158,8 @@ block body
 
         .row
           .col-sm-8.col-sm-offset-2
-            button.btn.btn-lg.btn-champ(type="submit") Let's Make a Better You
+            button.btn.btn-lg.btn-champ(type="submit") Contact Me to Get Started!
+            p Send me your info and I'll help you get started with a free training and nutrition assesment.
 
   section.about-me#about-me
     .container
